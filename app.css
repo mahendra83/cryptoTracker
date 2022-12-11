@@ -1,0 +1,13 @@
+.main{
+    margin: 10%;
+}
+h1,h4{
+    color: #010312;
+}
+button{
+    margin-top: 10px;
+}
+body{
+    background-image: url('https://images.livemint.com/img/2022/10/24/1600x900/crypto_1666573481733_1666573481965_1666573481965.jpg');
+    background-repeat: no-repeat;
+}
