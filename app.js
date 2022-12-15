@@ -1,9 +1,13 @@
 const form = document.querySelector('#searchForm');
 const res = document.querySelector('#resTable');
 const cont = document.getElementById("allContaint");
+var updateCoin;
 const time = new Date();
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
+    if(updateCoin){
+        clearTimeout(updateCoin);
+    }
     const ctype = form.elements.coinType.value;
     cont.classList.add('mainClick');
     cont.classList.remove('main');    
@@ -53,4 +57,5 @@ const showPrice = (coinData)=>{
 </tr>
 
 `;
+    updateCoin = setTimeout(() => fetchPrice(ctype),100000);
 };
