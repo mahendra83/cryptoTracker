@@ -1,7 +1,7 @@
 const form = document.querySelector('#searchForm');
 const res = document.querySelector('#resTable');
 const cont = document.getElementById("allContaint");
-
+const time = new Date();
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const ctype = form.elements.coinType.value;
@@ -46,5 +46,11 @@ const showPrice = (coinData)=>{
 <tr>
     <td>Change (24hrs)</td>
     <td style="color:${col};">${change} ${curr}</td>
-</tr>`;
+</tr>
+<tr>
+    <td>Last Update</td>
+    <td ${time}</td>
+</tr>
+
+`;
 };
